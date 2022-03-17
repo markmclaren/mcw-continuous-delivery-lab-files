@@ -1,12 +1,12 @@
 version: "3.4"
 services:
   api:
-    image: ghcr.io/markmclaren/fabrikam-api:main
+    image: ghcr.io/markmclaren/mcw-continuous-delivery-lab-files/fabrikam-api:main
     ports:
       - "3001:3001"
 
   web:
-    image: ghcr.io/markmclaren/fabrikam-web:main
+    image: ghcr.io/markmclaren/mcw-continuous-delivery-lab-files/fabrikam-web:main
     depends_on:
         - api
     environment:
