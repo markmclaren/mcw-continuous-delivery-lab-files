@@ -7,22 +7,24 @@ name: Docker
 
 on:
   schedule:
-    - cron: "45 7 * * *"
+    - cron: '45 7 * * *'
   push:
-    branches: [main]
+    branches: [ main ]
     # Publish semver tags as releases.
-    tags: ["v*.*.*"]
+    tags: [ 'v*.*.*' ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 env:
   # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io/markmclaren
+  REGISTRY: ghcr.io/<githubaccountname>/<githubreponame>
   # github.repository as <account>/<repo>
   IMAGE_NAME: fabrikam-web
 
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -60,6 +62,3 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-  REGISTRY: ghcr.io
-  # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
