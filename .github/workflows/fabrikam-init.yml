@@ -17,7 +17,7 @@ on:
 
 env:
   # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io/<githubaccountname>/<githubreponame>
+  REGISTRY: ghcr.io/markmclaren/mcw-continuous-delivery-lab-files
   # github.repository as <account>/<repo>
   IMAGE_NAME: fabrikam-init
 
