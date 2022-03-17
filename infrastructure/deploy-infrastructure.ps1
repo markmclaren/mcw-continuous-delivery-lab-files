@@ -1,10 +1,12 @@
-$studentprefix = "Your 3 letter abbreviation here"
+$studentprefix = "565046"
 $resourcegroupName = "fabmedical-rg-" + $studentprefix
 $cosmosDBName = "fabmedical-cdb-" + $studentprefix
 $webappName = "fabmedical-web-" + $studentprefix
 $planName = "fabmedical-plan-" + $studentprefix
 $location1 = "westeurope"
 $location2 = "northeurope"
+
+Write-Output $resourcegroupName
 
 # Create resource group
 az group create `
